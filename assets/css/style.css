@@ -1,0 +1,669 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, sans-serif;
+    height: max-content;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* COMMON */
+
+
+/* HEADER */
+#header{
+    width: 100%;
+    max-height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    background-color: #000;
+    box-shadow: 0 0 10px #8f8f8f;
+    z-index: 9999;
+}
+
+.headerContent{
+    height: max-content;
+}
+
+.headerContent li{
+    display: flex;
+    float: left;
+    padding: 12px 24px;
+    font-size: 15px;
+}
+
+.headerContent li a{
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.fa-angle-down{
+    color: #fff;
+    margin: auto;
+}
+
+.headerContent li:hover,
+.headerContent li:hover > a,
+.headerContent li:hover > a i{
+    color: #000;
+    background-color: #cccccc;
+}
+
+.headerContent > ul > li{
+    position: relative;
+}
+
+.headerPopUp{
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.headerMore{
+    display: flex;
+}
+
+.headerPopUp{
+    min-width: 160px;
+}
+
+.headerPopUp > li > a{
+    color: #000;
+    text-transform: capitalize;
+    line-height: 15px;
+    text-indent: -5px
+}
+
+.headerPopUp > li:hover{
+    background-color: #cccccc;
+}
+
+.headerContent li:hover .headerPopUp{
+    display: grid;
+    grid-template: 1, 1fr;
+    box-shadow: 0 0 10px #8f8f8f;
+}
+
+.searchBtn{ 
+    min-height: 46.5px;
+    float: right;
+    padding: 12px 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-magnifying-glass{
+    color: #fff;
+}
+
+.searchBtn:hover{
+    background-color: #F44336;
+}
+
+
+/* SLIDER */
+#slider{
+    width: 2000px;
+    margin-top: 46.5px;
+    position: relative; 
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    overflow: hidden;
+}
+
+.sliderImgText{
+    max-height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: changeImg 12s infinite;
+}
+
+@keyframes changeImg{
+    0%{
+        transform: translateX(100%);
+    }
+    15%{
+        transform: translateX(100%);
+    }
+    30%{
+        transform: translateX(0%);
+    }
+    45%{
+        transform: translateX(0%);
+    }
+    60%{
+        transform: translateX(-100%);
+    }
+    75%{
+        transform: translateX(-100%);
+    }
+    90%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+.sliderImgText img{
+    min-width: 2000px;
+}
+
+.sliderText{
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    display: grid;
+    transform: translateY(-100%);
+
+    width: 100%;
+    padding: 32px 16px;
+}
+
+.sliderText >h3{
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.sliderText p{
+    margin: 15px 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.sliderText h3,
+.sliderText p{
+    text-align: center;
+}
+
+/* CONTENT */
+#content{
+    min-width: 2000px;
+    height: auto;
+    position: relative;
+}
+/* THE BAND */
+#theBand{
+    max-width: 800px;
+    position: relative; 
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    padding: 64px 16px;
+}
+
+.theBandText{
+    color: #000;
+}
+
+.theBandText h3{
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+
+    margin: 10px 0;
+}
+
+.theBandText h4{
+    font-size: 15px;
+    opacity: 0.6;
+    font-weight: 200;
+    font-style: italic;
+    text-align: center;
+
+    margin: 15px 0;
+}
+
+.theBandText p{
+    text-align: justify;
+    margin: 15px 0;
+}
+
+.theBandImg{
+    width: 100%;
+    display: flex;
+    padding: 32px 0;
+}
+
+.memberImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.memberImg img{
+    max-width: 60%;
+    margin-bottom: 16px;
+    border-radius: 7px;
+}
+
+.memberImg p{
+    text-align: center;
+    margin: 15px 0;
+}
+
+/* TOUR */
+
+#tourDate{
+    width: 2000px;
+    background-color: #000;
+    position: relative; 
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    height: fit-content;
+}
+
+.tourDateContainer{
+    max-width: 800px;
+    padding: 64px 16px;
+
+    position: relative; 
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.tourHead{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tourHead h2{
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: 400;
+
+    margin: 10px 0;
+}
+
+.tourHead p{
+    font-style: italic;
+    font-size: 15px;
+    opacity: 0.7;
+
+    margin: 15px 0;
+}
+
+.dateBox{
+    max-width: 800px;
+    background-color: #fff;
+    margin-top: 18px;
+}
+
+.dateBox > ul{
+    position: relative;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.dateBox > ul > li{
+    list-style: none;
+    font-size: 15px;
+    color:  rgb(117, 117, 117);
+    line-height: 1.5;
+
+    display: flex;
+    padding: 8px 16px;
+
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.dateBox > ul > li > p{
+    color: #fff;
+    background-color: rgb(244, 67, 54);
+    line-height: 22.5px;
+
+    padding: 0 8px;
+    margin-left: 16px;
+}
+
+.dateBox > ul > li > span{
+    color: #fff !important;
+    background-color: #000;
+    border-radius: 50%;
+    font-size: 15px;
+
+    position: absolute;
+    right: 0;
+    padding: 0 8px;
+    margin-right: 16px;
+}
+
+.locationBox{
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 32px 0;
+}
+
+.locationElement{
+    background-color: #fff;
+    margin-bottom: 16px;
+}
+
+
+.locationElement img{
+    max-width: 100%;
+    display: block;
+}
+
+.locationElement img:hover{
+    opacity: 0.6;
+}
+
+.locationContent{
+    padding: 0 16px;
+}
+
+.locationText{
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.locationText > p-1{
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.locationText p-2{
+    opacity: 0.7;
+    margin: 15px 0;
+}
+
+.locationText p-3{
+    margin: 15px 0;
+}
+
+.buyBtn{
+    font-size: 15px;
+    color: #fff;
+    background-color: #000;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.buyBtn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
+/* CONTACT */
+#contact{
+    width: 2000px;
+    height: max-content;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.contactContainer{
+    max-width: 800px;
+    min-height: 450px;
+    padding: 64px 16px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+}
+
+
+.contactHead{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contactHead h2{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.contactHead > p{
+    font-size: 15px;
+    font-style: italic;
+    opacity: 0.6;
+    margin: 15px 0;
+}
+
+.contactBox{
+    padding: 32px 0;
+}
+
+.contactContent{
+    max-width: calc(50%);
+    float: left;
+    line-height: 25px;
+}
+
+.contactContent > p {
+    font-style: normal !important;
+
+}
+
+.contactContent > p > i{
+    display: inline-block;
+    text-align: left;
+    margin-right: 15px;
+}
+
+.contactForm{
+    max-width: calc(50%);
+    height: max-content;
+    float: right;
+    font-size: 15px;
+    position: relative;
+    display: block;
+}
+
+.firstForm{
+    grid-auto-columns: 50% 50%;
+    grid-auto-flow: column;
+    display: grid;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    gap: 8px;
+}
+
+.firstForm input{
+    width: 100%;
+}
+
+.secondForm{
+    display: block;
+}
+
+.secondForm input{
+    width: 100%;
+}
+
+.firstForm input,
+.secondForm input{
+    padding: 8px;
+    border: 1px rgb(204, 204, 204) solid;
+}
+
+.sendBtn{
+    max-width: fit-content;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 25px;
+
+    color: #fff;
+    background-color: #000;
+    padding: 8px 16px;
+    margin: 16px 0;
+
+    cursor: pointer;
+    border: none;
+    float: right;
+}
+
+.sendBtn:hover{
+    color: #000;
+    background-color: #ccc;
+}
+
+/* FOOTER */
+.footerImg > img{
+    width: 100%;
+    display: block;
+}
+
+.footerText{
+    padding: 64px 16px;
+}
+
+.footerText > ul{
+    font-size: 24px;
+    list-style: none;
+    gap: 3px;
+}
+    
+.footerText > p{
+    font-size: 15px;
+    gap: 5px;
+    margin: 15px 0;
+}
+
+.footerText > ul,
+.footerText > p, a {
+    display: flex;
+    justify-content: center;
+    color: #8f8f8f;
+}
+
+/* MODAL */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.3);
+
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.open{
+    display: flex;
+}
+
+.modal-container{
+    width: 900px;
+    height: max-content;
+    box-shadow: 0 0 5px #000;
+    margin: auto;
+}
+
+.modal-head{
+    background-color: #009688;
+    position: relative;
+    padding: 32px 16px;
+}
+
+.modal-close{
+    color: #fff;
+    background-color: #009688;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    display: block;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.modal-close:hover{
+    color: red;
+}
+
+.modal-title{
+    font-size: 30px;
+    color: #fff;
+    margin: 10px 0;
+    display: flex;
+    gap: 10px;
+
+    justify-content: center;
+}
+
+.modal-title > h2{
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.modal-content{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0.15px 16px;
+}
+
+.modal-content > input{
+    padding: 8px;
+    border: 1px solid #cccccc;
+}
+
+.modal-label{
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.pay-btn{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #009688;
+    padding: 16px;
+    margin: 16px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.pay-btn:hover{
+    opacity: 0.8;
+}
+
+.modal-foot >p{
+    font-size: 15px;
+    display: block;
+    float: right;
+    margin: 15px 0;
+}
